@@ -1,0 +1,1 @@
+{"Telha":true,"AlcaDeMira":true,"FundoDoDeposito":true,"Condicao":true,"Observacao":"test"}{"NumeroDoFuzil":1,"Telha":true,"AlcaDeMira":true,"FundoDoDeposito":true,"Condicao":true,"Observacao":"test"}

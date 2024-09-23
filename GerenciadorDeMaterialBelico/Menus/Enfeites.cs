@@ -4,9 +4,9 @@
     {
         private static void EnfeiteT(string titulo) 
         {
-            for (int i = 0; i < titulo.Length; i++)
+            for (int i = 0; i < titulo.Length/4; i++)
             {
-                Console.Write("=");
+                Console.Write("====");
                 Thread.Sleep(1);
             }
         }

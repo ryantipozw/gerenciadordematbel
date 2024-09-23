@@ -1,12 +1,10 @@
 ﻿namespace GerenciadorDeMaterialBelico.Menus;
-internal class MenuAdicionarPecas : Menu
+internal class MenuAdicionarPecas : IMenu
 {
-    public static void MostrarMenu()
+    public void MostrarMenu()
     {
-        Enfeites.Titulo("Adicionar Peças");
-        Console.WriteLine("Qual peça deseja adicionar?");
-        /* 
-        Lista contendo as peças a serem escolhidas
-        */
+        IMenu.WriteInput("\n\n\n\n\n\n\n\n\n        Ainda não implementado...\n");
+        Thread.Sleep(1000);
+        IMenu.RetornarAoMenuInicial();
     }
 }

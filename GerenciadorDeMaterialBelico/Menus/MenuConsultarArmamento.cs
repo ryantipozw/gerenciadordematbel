@@ -1,9 +1,57 @@
-﻿namespace GerenciadorDeMaterialBelico.Menus;
-internal class MenuConsultarArmamento : Menu
+﻿using GerenciadorDeMaterialBelico.Exceptions;
+using GerenciadorDeMaterialBelico.Listagem;
+using GerenciadorDeMaterialBelico.Menus.Consultas;
+
+namespace GerenciadorDeMaterialBelico.Menus;
+internal class MenuConsultarArmamento : IMenu
 {
-    public static void MostrarMenu()
+    public void MostrarMenu()
     {
         Enfeites.Titulo("Consulta de Armamento");
-        Menu.Write("Digite o numero do fuzil que deseja consultar: ");
+        IMenu.Write("1.Consulta individual");
+        IMenu.Write("2.Fuzis 100%");
+        IMenu.Write("3.Fuzis em condições");
+        IMenu.Write("4.Fuzis sem condições");
+        IMenu.Write("0.Voltar ao menu principal\n");
+        IMenu.WriteInput("Digite uma opção acima: ");
+        var opcaoDigitada = int.Parse(Console.ReadLine());
+        try
+        {
+            switch (opcaoDigitada)
+            {
+                case 1:
+                    Console.Clear();
+                    ConsultaIndividual consultaIndividual = new();
+                    consultaIndividual.MostrarMenu(); break;
+                case 2:
+                    Console.Clear();
+                    ConsultaCemPct consultaCemPct = new();
+                    consultaCemPct.MostrarMenu(); break;
+                case 3:
+                    Console.Clear();
+                    ConsultaCondicoes consultaCondicoes = new();
+                    consultaCondicoes.MostrarMenu(); break;
+                case 4:
+                    Console.Clear();
+                    ConsultaSemCondicoes consultaSemCondicoes = new();
+                    consultaSemCondicoes.MostrarMenu(); break;
+                case 0:
+                    Console.Clear();
+                    MenuInicial menuInicial = new();
+                    menuInicial.MostrarMenu();
+                    break;
+
+                default:
+                    Console.WriteLine("");
+                    IMenu.Write("Digite uma opção válida!");
+                    Thread.Sleep(1500);
+                    Console.Clear();
+                    this.MostrarMenu(); break;
+            }
+        }
+        catch
+        {
+            ExcecaoGenerica.MostrarExcecao(ex);
+        }       
     }
 }
