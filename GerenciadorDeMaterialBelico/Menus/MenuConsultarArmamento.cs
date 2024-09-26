@@ -8,11 +8,11 @@ internal class MenuConsultarArmamento : IMenu
     public void MostrarMenu()
     {
         Enfeites.Titulo("Consulta de Armamento");
-        IMenu.Write("1.Consulta individual");
-        IMenu.Write("2.Fuzis 100%");
-        IMenu.Write("3.Fuzis em condições");
-        IMenu.Write("4.Fuzis sem condições");
-        IMenu.Write("0.Voltar ao menu principal\n");
+        IMenu.Write("1.Consulta individual\n");
+        IMenu.Write("2.Fuzis 100%\n");
+        IMenu.Write("3.Fuzis em condições\n");
+        IMenu.Write("4.Fuzis sem condições\n");
+        IMenu.Write("0.Voltar ao menu principal\n\n");
         IMenu.WriteInput("Digite uma opção acima: ");
         try
         {

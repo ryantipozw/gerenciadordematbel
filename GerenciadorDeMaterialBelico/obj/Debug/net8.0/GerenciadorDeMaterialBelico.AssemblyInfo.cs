@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GerenciadorDeMaterialBelico")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a1cbcbfea6f3c0ede2ae0b7d302be1acd6b81d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+975225017940d02ce536d90d1b31bf64edfe7402")]
 [assembly: System.Reflection.AssemblyProductAttribute("GerenciadorDeMaterialBelico")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GerenciadorDeMaterialBelico")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

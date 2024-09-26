@@ -7,7 +7,7 @@ internal class ConsultaSemCondicoes : IMenu
     public void MostrarMenu()
     {
         Enfeites.Titulo("Consulta de fuzis SEM condições");
-        IMenu.Write("A seguir está todos os fuzis que estão sem condições: ");
+        IMenu.Write("A seguir está todos os fuzis que estão sem condições: \n");
         ListaDeFuzis.MostrarFuzisSemCondicoes();
         IMenu.Write("Pressione qualquer tecla para retornar.");
         Console.ReadKey();

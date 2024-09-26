@@ -40,6 +40,15 @@ internal class MenuAdicionarArmamento : IMenu
         Thread.Sleep(500);
         IMenu.RetornarAoMenuInicial();
         }
+        catch (System.FormatException ex)
+        {
+            IMenu.Write($"Erro: {ex.GetType().Name}");
+            Console.WriteLine();
+            IMenu.Write("Digite uma das opções acima!");
+            Thread.Sleep(2000);
+            Console.Clear();
+            this.MostrarMenu();
+        }
         catch (Exception ex)
         {
             ExcecaoGenerica.MostrarExcecao(ex);

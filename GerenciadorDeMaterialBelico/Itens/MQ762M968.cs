@@ -43,11 +43,11 @@ internal class MQ762M968
     {
         
         IMenu.Write($"O fuzil {NumeroDoFuzil} possui: \n");
-        IMenu.Write($"Telha: {Verificacao(Telha)}.");
-        IMenu.Write($"Alça de mira: {Verificacao(AlcaDeMira)}.");
-        IMenu.Write($"Fundo do Depósito: {Verificacao(FundoDoDeposito)}.\n");
-        IMenu.Write($"O fuzil está em condições: {Verificacao(Condicao)}."); 
-        IMenu.Write($"Observação: {Observacao}");
+        IMenu.Write($"Telha: {Verificacao(Telha)}.\n");
+        IMenu.Write($"Alça de mira: {Verificacao(AlcaDeMira)}.\n");
+        IMenu.Write($"Fundo do Depósito: {Verificacao(FundoDoDeposito)}.\n\n");
+        IMenu.Write($"O fuzil está em condições: {Verificacao(Condicao)}.\n"); 
+        IMenu.Write($"Observação: {Observacao}\n");
         
     }
 }

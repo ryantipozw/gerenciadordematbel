@@ -10,11 +10,11 @@ internal class MenuInicial : IMenu
     public void MostrarMenu()
     {
         Enfeites.Titulo("Gerenciador de Material Bélico - TG 02-026");
-        IMenu.Write("1.Adicionar Armamento");
-        IMenu.Write("2.Atualizar Armamento");
-        IMenu.Write("3.Adicionar Peças (Indisponível)");
-        IMenu.Write("4.Consultar Armamento");
-        IMenu.Write("0.Sair do programa\n");
+        IMenu.Write("1.Adicionar Armamento\n");
+        IMenu.Write("2.Atualizar Armamento\n");
+        IMenu.Write("3.Adicionar Peças (Indisponível)\n");
+        IMenu.Write("4.Consultar Armamento\n");
+        IMenu.Write("0.Sair do programa\n\n");
         IMenu.WriteInput("Selecione uma opção acima: ");
         try
         {

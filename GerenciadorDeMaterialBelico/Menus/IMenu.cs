@@ -9,11 +9,22 @@ namespace GerenciadorDeMaterialBelico.Menus
         protected static string margem = "        ";
         public static void Write(string texto)
         {
-            Console.WriteLine($"{margem}{texto}");
+            string text = $"{margem}{texto}";
+            foreach (var letra in text)
+            {
+                Console.Write(letra);
+                Thread.Sleep(1);
+            }
         }
         public static void WriteInput(string texto)
         {
-            Console.Write($"{margem}{texto}");
+            //Console.Write($"{margem}{texto}");
+            string text = $"{margem}{texto}";
+            foreach (var letra in text)
+            {
+                Console.Write(letra);
+                Thread.Sleep(5);
+            }
         }
         public static bool OptionSelect(string opcao, bool valor, IMenu menu)
         {

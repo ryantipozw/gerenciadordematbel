@@ -64,7 +64,7 @@ internal class ListaDeFuzis
         {
             if (fuzil.Value.Telha && fuzil.Value.AlcaDeMira && fuzil.Value.FundoDoDeposito && fuzil.Value.Condicao)
             {
-                IMenu.Write($"Fuzil numero: {fuzil.Key.ToString()};");
+                IMenu.Write($"Fuzil numero: {fuzil.Key.ToString()};\n");
             }
         }
     }
@@ -74,7 +74,7 @@ internal class ListaDeFuzis
         {
             if (fuzil.Value.Condicao)
             {
-                IMenu.Write($"Fuzil numero: {fuzil.Key.ToString()};");
+                IMenu.Write($"Fuzil numero: {fuzil.Key.ToString()};\n");
             }
         }
     }
@@ -84,7 +84,7 @@ internal class ListaDeFuzis
         {
             if (!fuzil.Value.Condicao)
             {
-                IMenu.Write($"Fuzil numero: {fuzil.Key.ToString()};");
+                IMenu.Write($"Fuzil numero: {fuzil.Key.ToString()};\n");
             }
         }
     }
