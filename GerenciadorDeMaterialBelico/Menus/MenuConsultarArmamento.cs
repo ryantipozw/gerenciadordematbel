@@ -14,9 +14,9 @@ internal class MenuConsultarArmamento : IMenu
         IMenu.Write("4.Fuzis sem condições");
         IMenu.Write("0.Voltar ao menu principal\n");
         IMenu.WriteInput("Digite uma opção acima: ");
-        var opcaoDigitada = int.Parse(Console.ReadLine());
         try
         {
+        var opcaoDigitada = int.Parse(Console.ReadLine());
             switch (opcaoDigitada)
             {
                 case 1:
@@ -49,7 +49,7 @@ internal class MenuConsultarArmamento : IMenu
                     this.MostrarMenu(); break;
             }
         }
-        catch
+        catch (Exception ex)
         {
             ExcecaoGenerica.MostrarExcecao(ex);
         }       

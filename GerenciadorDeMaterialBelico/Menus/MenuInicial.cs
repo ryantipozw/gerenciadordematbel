@@ -16,9 +16,9 @@ internal class MenuInicial : IMenu
         IMenu.Write("4.Consultar Armamento");
         IMenu.Write("0.Sair do programa\n");
         IMenu.WriteInput("Selecione uma opção acima: ");
-        var opcaoDigitada = int.Parse(Console.ReadLine());
         try
         {
+        var opcaoDigitada = int.Parse(Console.ReadLine());
             switch (opcaoDigitada)
             {
                 case 1:
@@ -46,7 +46,11 @@ internal class MenuInicial : IMenu
                 case 6:
                     Console.Clear();
 
-                    ListaDeFuzis.Desserializar();
+                    for (int i = 5; i < 100; i++)
+                    {
+                        MQ762M968 fuzil = new(i, true, true, true, true);
+                        ListaDeFuzis.AdicionarFuzil(i, fuzil);
+                    }
 
                     Console.ReadKey(); break;
                 case 0:
@@ -69,6 +73,15 @@ internal class MenuInicial : IMenu
                     Console.Clear();
                     this.MostrarMenu();  break;
             }
+        }
+        catch (System.FormatException ex)
+        {
+            IMenu.Write($"Erro: {ex.GetType().Name}");
+            Console.WriteLine();
+            IMenu.Write("Digite uma das opções acima!");
+            Thread.Sleep(2000);
+            Console.Clear();
+            this.MostrarMenu();
         }
         catch (Exception ex)
         {
