@@ -6,7 +6,8 @@ internal class ConsultaIndividual : IMenu
 {
     public void MostrarMenu()
     {
-        try { 
+        try 
+        { 
         Enfeites.Titulo("Consulta Individual");
         IMenu.WriteInput("Digite o numero do fuzil a ser consultado: ");
         string numeroDoFuzil = Console.ReadLine();
@@ -24,6 +25,15 @@ internal class ConsultaIndividual : IMenu
             Console.Clear();
             MenuConsultarArmamento menuConsultarArmamento = new MenuConsultarArmamento();
             menuConsultarArmamento.MostrarMenu();
+        }
+        catch (System.FormatException ex)
+        {
+            IMenu.Write($"Erro: {ex.GetType().Name}");
+            Console.WriteLine();
+            IMenu.Write("Digite uma das opções acima!");
+            Thread.Sleep(2000);
+            Console.Clear();
+            this.MostrarMenu();
         }
         catch (Exception ex)
         {
