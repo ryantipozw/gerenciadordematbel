@@ -1,0 +1,44 @@
+﻿	@using FrangoZe.Web.Models.Model;
+@model Produto
+
+@{
+	ViewData["Title"] = "Editar Produto";
+}
+
+<html>
+<body>
+	<div>
+		<!-- Título -->
+		<h1 class="display-4">Editar produto (@Model.Nome)</h1>
+	</div>
+
+	<form asp-controller="Produto" asp-action="Alterar" method="post" id="AddProduto">
+		<input type="hidden" asp-for="Id"/>
+		<div class="mb-3">
+			<label for="Nome" class="form-label">Nome do produto</label>
+			<input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do produto" required>
+		</div> <!--Campo do nome-->
+
+		<div class="mb-3">
+			<label for="Descricao" class="form-label">Descrição</label>
+			<input type="text" asp-for="Descricao" class="form-control" placeholder="Descrição do produto" required>
+		</div> <!--Campo da descrição-->
+
+		<div class="mb-3">
+			<label for="Preco" class="form-label">Preço</label>
+			<input type="number" asp-for="Preco" class="form-control" placeholder="Preço" required>
+		</div> <!--Campo do preço-->
+
+		<div class="mb-3">
+			<label for="Quantidade no Estoque" class="form-label">Quantidade no Estoque</label>
+			<input type="number" asp-for="QuantidadeNoEstoque" class="form-control" placeholder="Quantidade no Estoque" required>
+		</div> <!--Campo da quantidade-->
+
+		<div>
+			<button type="submit" id="submitButton" class="btn btn-primary btn-block" disabled>Salvar alterações</button>
+			<a class="btn btn-secondary btn-block" asp-controller="Produto" asp-action="Index" role="button">Voltar</a>
+		</div><!--Submit-->
+	</form>
+</body>
+<script src="~/js/script-add_produto.js"></script>
+</html>

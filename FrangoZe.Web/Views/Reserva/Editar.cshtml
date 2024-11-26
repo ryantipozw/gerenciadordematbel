@@ -1,0 +1,79 @@
+﻿@model ReservaProdutoViewModel
+@{
+	ViewData["Title"] = "Editar Reserva";
+}
+   @using FrangoZe.Web.Models.Model;
+   @using FrangoZe.Web.ViewModels;
+
+<html>
+<body>
+	<div>
+		<h1 class="display-4">Editar uma reserva</h1>
+	</div>
+	<form asp-controller="Reserva" asp-action="Alterar" method="post" id="AddReserva">
+		<input type="hidden" asp-for="Reserva.Id" />
+		<div class="mb-3">
+			<label for="Nome" class="form-label">Nome</label>
+			<input type="text" asp-for="Reserva.Cliente_Nome" class="form-control" placeholder="Digite o nome" required>
+		</div> <!--Campo do nome-->
+		<div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="checkEntrega">
+				<label class="form-check-label" for="checkEntrega">
+					Para entrega a domicílio
+				</label>
+			</div>
+			<div class="col-auto">
+				<label class="form-label">Endereco</label>
+				<input type="text" asp-for="Reserva.Endereco.Endereco" id="enderecoEntrega" class="form-control" placeholder="Digite o nome da rua" required disabled>
+				<label class="form-label">Numero</label>
+				<input type="text" asp-for="Reserva.Endereco.Numero" id="numeroEntrega" class="form-control" placeholder="Digite o numero" required disabled>
+				<label class="form-label">Bairro</label>
+				<input type="text" asp-for="Reserva.Endereco.Bairro" id="bairroEntrega" class="form-control" placeholder="Digite o bairro" required disabled>
+			</div>
+			<div class="col-auto mt-3">
+				<input type="time" asp-for="Reserva.Hora_Entrega" id="horaEntrega" class="form-control col-auto" placeholder="Horário para entrega" required disabled>
+			</div>
+			<div>
+			</div>
+		</div><!--Campo Entrega-->
+		<div>
+			<h1 class=" display-6">Escolha os itens</h1>
+			<div class="form-check">
+				@for (int i = 0; i < Model.produtos.Count; i++)
+				{
+					<p>
+						<input class="form-check-input" type="checkbox" value="@Model.produtos[i].Quantidade" id="checkbox_@Model.produtos[i]">
+						<label class="form-check-label" for="checkbox_@Model.produtos[i]">
+							@Model.produtos[i].Nome
+						</label>
+						<input type="hidden" asp-for="Reserva.Produtos[i].Id" value="@Model.produtos[i].Id" />
+						<input type="hidden" asp-for="Reserva.Produtos[i].Nome" value="@Model.produtos[i].Nome" />
+						<input type="hidden" asp-for="Reserva.Produtos[i].Preco" value="@Model.produtos[i].Preco" />
+						<input class="mb-3" asp-for="Reserva.Produtos[i].Quantidade" type="number" placeholder="Insira a quantidade" disabled>
+					</p>
+				}
+			</div>
+		</div><!--Campo itens-->
+		<div>
+			<h2 class="display-6 mt-2">Pagamento</h2>
+			<div class="form-floating">
+				<select class="form-select" id="floatingSelect" asp-for="Reserva.FormaDePagamento">
+					<option selected>------------------</option>
+					<option value="pix">Pix</option>
+					<option value="dinheiro">Dinheiro</option>
+					<option value="cartao">Cartão</option>
+				</select>
+				<label for="floatingSelect">Selecione uma forma de pagamento</label>
+			</div>
+		</div>
+		<div>
+			<!--Campo Pagamento-->
+		<div>
+				<button type="submit" id="submitButton" class="btn btn-primary mt-4 btn-block" disabled>Salvar alterações</button>
+				<a class="btn btn-secondary mt-4 btn-block" asp-controller="Reserva" asp-action="Index" role="button">Voltar</a>
+		</div><!--Submit-->
+	</form>
+</body>
+<script src="~/js/script-ativarendereco.js"></script>
+</html>

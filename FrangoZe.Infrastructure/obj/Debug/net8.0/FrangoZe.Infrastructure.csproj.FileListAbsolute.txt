@@ -1,0 +1,16 @@
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\bin\Debug\net8.0\FrangoZe.Infrastructure.deps.json
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\bin\Debug\net8.0\FrangoZe.Infrastructure.dll
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\bin\Debug\net8.0\FrangoZe.Infrastructure.pdb
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\bin\Debug\net8.0\FrangoZe.Domain.dll
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\bin\Debug\net8.0\FrangoZe.Domain.pdb
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\obj\Debug\net8.0\FrangoZe.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\obj\Debug\net8.0\FrangoZe.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\obj\Debug\net8.0\FrangoZe.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\obj\Debug\net8.0\FrangoZe.Infrastructure.AssemblyInfo.cs
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\obj\Debug\net8.0\FrangoZe.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\obj\Debug\net8.0\FrangoZe.Infrastructure.sourcelink.json
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\obj\Debug\net8.0\FrangoZe.7811C9AF.Up2Date
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\obj\Debug\net8.0\FrangoZe.Infrastructure.dll
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\obj\Debug\net8.0\refint\FrangoZe.Infrastructure.dll
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\obj\Debug\net8.0\FrangoZe.Infrastructure.pdb
+C:\Users\ryanm\source\repos\FrangoZe.Infrastructure\obj\Debug\net8.0\ref\FrangoZe.Infrastructure.dll

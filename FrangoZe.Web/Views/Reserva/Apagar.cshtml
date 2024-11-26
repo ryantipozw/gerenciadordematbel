@@ -1,0 +1,23 @@
+﻿@model Reserva
+
+@using FrangoZe.Web.Models.Model;
+
+@{
+	ViewData["Title"] = "Confirmação apagar a reserva";
+}
+
+<html>
+<body>
+	<div class="align-items-center">
+		<div class=" text-center">
+			<h3>Deseja Fechar ou Cancelar a reserva de @Model.Cliente_Nome ?</h3>
+			<h4>Fechar a reserva seria concluir a reserva (o cliente recebeu o produto e pagou), já cancelar é para quando o cliente não quiser mais</h4>
+		</div>
+		<div class=" d-grid gap-2">
+			<a class=" btn btn-primary" role="button" asp-controller="Reserva" asp-route-id="@Model.Id" asp-action="ApagarConfirmado">Fechar reserva</a>
+			<a class=" btn btn-warning" role="button" asp-controller="Reserva" asp-route-id="@Model.Id" asp-action="Cancelar">Cancelar reserva</a>
+			<a class=" btn btn-secondary" role="button" asp-controller="Reserva" asp-action="Index">Voltar</a>
+		</div>
+	</div>
+</body>
+</html>

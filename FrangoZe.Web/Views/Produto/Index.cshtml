@@ -1,0 +1,58 @@
+﻿@model List<Produto>
+@{
+	ViewData["Title"] = "Lista de Produtos";
+}
+	@using FrangoZe.Web.Models.Model;
+
+
+<html>
+<body class="text-center">
+	<div class="text-left">
+		<h1 class="display-4">Produtos</h1>
+		<hr />
+	</div>
+	<div class="d-grid gap-2 d-md-flex justify-content-md-center">
+		<a class="btn btn-primary" role="button" asp-controller="Produto" asp-action="Adicionar">Adicionar produto</a>
+	</div>
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Nome</th>
+					<th scope="col">Descriçao</th>
+					<th scope="col">Preço</th>
+					<th scope="col">Quantidade Vendida</th>
+					<th scope="col">Quantidade Reservada</th>
+					<th scope="col">Quantidade Estoque</th>
+					<th scope="col"></th>
+				</tr>
+			</thead>
+			<tbody>
+				@if (Model != null && Model.Any())
+				{
+					foreach (var produto in Model)
+					{
+						<tr>
+							<th scope="row">@produto.Id</th>
+							<td>@produto.Nome</td>
+							<td>@produto.Descricao</td>
+							<td>R$@produto.Preco</td>
+							<td>@produto.QuantidadeVendida</td>
+							<td>@produto.QuantidadeReservado</td>
+							<td>@produto.QuantidadeNoEstoque</td>
+							<td>
+								<div class="btn-group" role="group">
+									<a role="button" class="btn btn-primary" asp-controller="Produto" asp-route-id="@produto.Id" asp-action="Editar">Editar</a>
+									<a role="button" class="btn btn-danger" asp-controller="Produto" asp-route-id="@produto.Id" asp-action="Deletar">Apagar</a>
+								</div>
+							</td>
+						</tr>
+					}
+				}
+			</tbody>
+		</table>
+
+	</div>
+</body>
+</html>
